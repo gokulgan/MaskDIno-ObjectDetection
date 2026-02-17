@@ -1,0 +1,7 @@
+services: 
+  maskdino_ros2_v2: 
+    image: fbe-dockerreg.rwu.de/prj-robocup/2026_robocup/perception/maskdino_ros2_v2
+    container_name: maskdino_ros2_g
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile

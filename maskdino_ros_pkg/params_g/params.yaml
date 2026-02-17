@@ -1,0 +1,27 @@
+/maskdino_ros2:
+  ros__parameters:
+    # confidence threshold
+    conf_thresh: 0.4
+
+    ## dino files
+    config_path: "/root/ros2_ws/src/maskdino_ros_pkg/maskdino_ros_pkg/maskdino/gokul/output/maskdino_20260120_171417/config.yaml"
+    weights_path: "/root/ros2_ws/src/maskdino_ros_pkg/maskdino_ros_pkg/maskdino/gokul/output/maskdino_20260120_171417/model_final.pth"
+    labels_path: "/root/ros2_ws/src/maskdino_ros_pkg/maskdino_ros_pkg/maskdino/gokul/output/maskdino_20260120_171417/dataset_info.json"
+
+    ## topics
+    # image topic
+    # img_topic: "/head_astra/rgb/image_raw"
+    img_topic: "/camera/color/image_raw"
+    # img_topic: "/xtion/rgb/image_raw"
+    #  depth topic for pose estimation
+    depth_topic: "/femto_mega/depth/points"
+    # depth_topic: "/xtion/depth_registered/points"
+    # topic of the output
+    out_topic: "/maskdino_ros2/detection"
+
+    class_names: ['gun','pringles_L','pringles_S','peach','pear','apple','strawberry','soccer_ball','cola','mustard','cup']
+    target_frame_id: 'camera_link'
+
+    #visualize
+    visualize: True
+
